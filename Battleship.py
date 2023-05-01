@@ -17,30 +17,12 @@
 ## 7. Player can't hit the same cell twice. It should appear an exclusion.
 ## 8. It should appear exclution in case of unexpected reactions.
 ## =======================================================================
-##
-## - class Battlefield shuld have print method. Ships to by hidden depending
-##   on type player/PC
-## - Programm should have 2 different parts:
-##   - preparation to the game (arranging ships on players and PCs sides)
-##   - actuall battle
-##
-##
-## - Creates two empty battlefields (players/PC)
-## - Creates list of ship_types
-## - Input ship position(if the enough place position of the ship is accepted
-##   and requests other ship position)
-## - all ships are horizontal(improve for vert position)
-## - Activation of the battlefild(leaving information about the ships only)
-## - Battlefield stores the information about opponent hits
-## - Ship contain information about section status and section addresses)
-##
 ##   A B
 ##  ┌─┬─┐
 ## 1│■│X│
 ##  ├─┼─┤
 ## 2│О│T│
 ##  └─┴─┘
-
 ## =======================================================================
 ## Class Cell() - keep state of cell on Battlefield
 ## =======================================================================
@@ -192,12 +174,12 @@ class Ship(Cell):
 
 class Battlefield():
     ALFABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    SIZE = 4                        # max size 26    
-##    SHIP_TYPES = [3,
-##                 2, 2,
-##                 1, 1, 1, 1,]                 # Ship types in the game
+    SIZE = 6                        # max size 26    
+    SHIP_TYPES = [3,
+                 2, 2,
+                 1, 1, 1, 1,]                 # Ship types in the game
 
-    SHIP_TYPES = [3, 2]                 # Ship types in the game
+
 
     def __init__(self, *, visible=True):
         self.field = []
